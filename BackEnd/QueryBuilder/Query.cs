@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace SqlKata
@@ -9,7 +10,6 @@ namespace SqlKata
         public bool IsDistinct { get; set; } = false;
         public string QueryAlias { get; set; }
         public string Method { get; set; } = "select";
-
         public Query() : base()
         {
         }

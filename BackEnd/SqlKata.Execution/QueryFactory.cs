@@ -24,7 +24,6 @@ namespace SqlKata.Execution
         public Query Query()
         {
             var query = new XQuery(this.Connection, this.Compiler);
-
             query.Logger = Logger;
 
             return query;
