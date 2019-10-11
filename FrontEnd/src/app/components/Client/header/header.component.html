@@ -1,0 +1,13 @@
+<div class="nk-contacts-top" *ngIf="notify">
+    <div class="container-fluid">
+        <div class="nk-contacts-left" style="width: 100%;">
+            <marquee direction="left" scrollamount="10">
+                <span [ngStyle]="{
+                    'color': n.color,
+                    'font-size': n.size +'px',
+                    'font-weight': 'bold'
+                }" *ngFor="let n of notify.noti">This is a sample scrolling text that has scrolls texts to left.</span>
+            </marquee>
+        </div>
+    </div>
+</div>

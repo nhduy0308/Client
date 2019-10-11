@@ -1,0 +1,31 @@
+<h3 class="nk-decorated-h-2"><span><span class="text-main-1">Last</span> News</span>
+</h3>
+<div class="nk-gap"></div>
+<div class="nk-tabs" *ngIf="newGroup">
+    <!-- Additional Classes: .nav-tabs-fill -->
+    <ul class="nav nav-tabs nav-tabs-fill" role="tablist">
+        <li class="nav-item" *ngFor="let group of newGroup"> <button class="nav-link" type="button" [ngStyle]="{'width': '100%'}" (click)="onTabClick(group)" [ngClass]="{'active': group.id == active.id}" role="tab" data-toggle="tab">{{group.name}}</button> </li>
+    </ul>
+    <div class="tab-content" *ngIf="active">
+        <div role="tabpanel" class="tab-pane fade show active">
+            <div class="nk-gap"></div>
+            <div class="nk-blog-post nk-blog-post-border-bottom" *ngFor="let item of active.news">
+                <div class="row vertical-gap">
+                    <div class="col-lg-3 col-md-5">
+                        <a href="blog-article.html" class="nk-post-img">
+                            <img src="{{item.image}}" alt="{{item.title}}">
+                        </a>
+                    </div>
+                    <div class="col-lg-9 col-md-7">
+                        <h2 class="nk-post-title h4"><a href="blog-article.html">{{item.title}}</a></h2>
+                        <div class="nk-post-date mt-10 mb-10"> <span class="fa fa-calendar"></span> {{item.createdDate}} <span class="fa fa-comments"></span> <a href="#">{{item.views}} views</a> </div>
+                        <div class="nk-post-text">
+                            <p>{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nk-gap"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BackEnd/.vs/ZeroOnline/v15
+/BackEnd/API/bin/Debug/netcoreapp2.1
+/BackEnd/API/obj
+/BackEnd/Common/bin/Debug/netcoreapp2.1
+/BackEnd/Common/obj
+/BackEnd/Entitty/bin/Debug/netcoreapp2.1
+/BackEnd/Entitty/obj
+/BackEnd/QueryBuilder/bin
+/BackEnd/QueryBuilder/obj
+/BackEnd/SqlKata.Execution/bin
+/BackEnd/SqlKata.Execution/obj

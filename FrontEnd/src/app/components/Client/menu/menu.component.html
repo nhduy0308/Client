@@ -1,0 +1,18 @@
+<nav detect-scroll (onScroll)="handleScroll($event)" class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-autohide" [ngClass]="{'nk-navbar-fixed': activeMenu}">
+    <div class="container">
+        <div class="nk-nav-table">
+            <a href="index.html" class="nk-nav-logo"> <img src="https://cdn-html.nkdev.info/goodgames/assets/images/logo.png" alt="GoodGames" width="199"> </a>
+            <ul class="nk-nav nk-nav-right d-none d-lg-table-cell" *ngIf="menus">
+                <li *ngFor="let menu of menus">
+                    <a href="{{menu.url}}"> {{menu.name}} </a>
+                </li>
+            </ul>
+            <ul class="nk-nav nk-nav-right nk-nav-icons">
+                <li class="single-icon d-lg-none">
+                    <a href="#" class="no-link-effect" data-nav-toggle="#nk-nav-mobile"> <span class="nk-icon-burger"> <span class="nk-t-1"></span> <span class="nk-t-2"></span> <span class="nk-t-3"></span> </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

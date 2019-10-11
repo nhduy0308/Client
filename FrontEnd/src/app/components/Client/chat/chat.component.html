@@ -1,0 +1,21 @@
+<div id="frame">
+    <div class="content">
+        <div class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+            <ul *ngIf="chats">
+                <li class="{{chat.sent ? 'replies' : 'sent'}}" *ngFor="let chat of chats">
+                    <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                    <span style="padding-left:15px;font-size:15px;font-weight:bold;" *ngIf="!chat.sent">duy</span>
+                    <div [ngStyle]="{'margin-top':'10px'}">
+                        <p [ngStyle]="{'background': chat.background,'color':chat.color,'font-size':chat.size}" innerHtml="{{chat.message}}"></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="message-input">
+            <div class="wrap">
+                <input ng-maxlength='10' (keyup.enter)="onEnter($event)" [(ngModel)]="text" [ngStyle]="{'font-weight': 'bold'}" type="text" placeholder="Write your message..." />
+                <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

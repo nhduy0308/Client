@@ -1,0 +1,35 @@
+<div class="nk-news-box" *ngIf="news">
+    <div class="nk-news-box-list">
+        <div class="nano">
+            <div class="nano-content">
+                <div class="nk-news-box-item" (click)="onClick(new)" [ngClass]="{'nk-news-box-item-active': new.id == active}" *ngFor="let new of news">
+                    <div class="nk-news-box-item-img">
+                        <img src="{{new.image}}" alt="{{new.title}}">
+                    </div>
+                    <h3 class="nk-news-box-item-title">{{new.title}}</h3> <span class="nk-news-box-item-categories">  </span>
+                    <div class="nk-news-box-item-text">
+                        <p>{{new.description}}</p>
+                    </div>
+                    <div class="nk-news-box-item-date"><span class="fa fa-calendar"></span> {{new.createdDate}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nk-news-box-each-info" *ngIf="activeNew">
+        <div class="nano">
+            <div class="nano-content">
+                <div class="nk-news-box-item-image">
+                    <img src="{{activeNew.image}}" alt="{{activeNew.title}}">
+                    <span class="nk-news-box-item-categories"> 
+                        <span class="bg-main-4">{{activeNew.groupName}}</span>
+                    </span>
+                </div>
+                <h3 class="nk-news-box-item-title"><a href="#" [ngStyle]="{'color': 'white'}">{{activeNew.title}}</a></h3>
+                <div class="nk-news-box-item-text">
+                    <p>{{activeNew.description}}</p>
+                </div><a href="blog-article.html" class="nk-news-box-item-more">Read More</a>
+                <div class="nk-news-box-item-date"> <span class="fa fa-calendar"></span> {{activeNew.createdDate}} </div>
+            </div>
+        </div>
+    </div>
+</div>
